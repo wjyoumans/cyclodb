@@ -195,7 +195,7 @@ $(document).ready(function() {
     });
     $('#table tbody').on('click', 'tr', function () {
         let data = table.row(this).data();
-        window.location = `/info?c=${data.conductor.plain}`
+        window.location.pathname = `/info?c=${data.conductor.plain}`
     });
 });
 
