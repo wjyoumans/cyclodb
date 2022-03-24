@@ -22,8 +22,8 @@ title: CycloDB
 email: wyoumans@usf.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Database of invariants of cyclotomic fields.
-baseurl: "/cyclodb" # the subpath of your site, e.g. /blog
-url: "https://wjyoumans.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://cyclodb.org" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  wjyoumans
 
