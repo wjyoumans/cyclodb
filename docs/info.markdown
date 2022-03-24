@@ -1,6 +1,7 @@
 ---
 layout: page
 usemathjax: true
+permalink: /info/
 ---
 
 <div class="info" id="info" style="text-align:left">
