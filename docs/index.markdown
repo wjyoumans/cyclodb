@@ -195,7 +195,7 @@ $(document).ready(function() {
     });
     $('#table tbody').on('click', 'tr', function () {
         let data = table.row(this).data();
-        window.location = `https://wjyoumans.github.io/cyclodb/info?c=${data.conductor.plain}`
+        window.location = '{{ "/info" | relative_url }}' + `?c=${data.conductor.plain}`
     });
 });
 
