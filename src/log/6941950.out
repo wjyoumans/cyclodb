@@ -1,6 +1,0 @@
-  ***   user warning: using slow certification method.
-slurmstepd: error: StepId=6941950.batch exceeded memory limit (100112633856 > 96636764160), being killed
-slurmstepd: error: Exceeded job memory limit
-slurmstepd: error: *** JOB 6941950 ON mdc-1057-23-3 CANCELLED AT 2022-03-23T13:56:08 ***
-slurmstepd: error: StepId=6941950.batch exceeded memory limit (100112633856 > 96636764160), being killed
-slurmstepd: error: Exceeded job memory limit

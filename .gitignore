@@ -3,4 +3,6 @@ Gemfile.lock
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+src/*.py
+src/*.jl
 vendor
