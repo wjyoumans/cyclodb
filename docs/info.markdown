@@ -1,5 +1,6 @@
 ---
 layout: page
+permalink: /info/
 usemathjax: true
 ---
 
