@@ -1,0 +1,47 @@
+---
+---
+@import "minima";
+
+/** Wrapper */
+.wrapper { max-width: -webkit-calc(1300px - (30px * 2)); max-width: calc(1300px - (30px * 2)); margin-right: auto; margin-left: auto; padding-right: 30px; padding-left: 30px; }
+@media screen and (max-width: 1300px) { .wrapper { max-width: -webkit-calc(1300px - (30px)); max-width: calc(1300px - (30px)); padding-right: 15px; padding-left: 15px; } }
+
+.advanced-search-button {
+  background-color: #898989;//777
+  color: white;
+  cursor: pointer;
+  padding: 1em;
+  width: 100%;
+  border: none;
+  border-radius: 1em;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 1em;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.info {
+    margin: 2em auto;
+    padding: 2em;
+    border: 1px solid #CCC;
+    border-radius: 1.5em;
+    overflow: auto;
+    width: 60%;
+}
+
+hr {
+    margin: 1em auto;
+    color: #CCC;
+}
