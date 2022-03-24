@@ -1,0 +1,20 @@
+  ***   user warning: using slow certification method.
+  ***   at top-level: cyclodata(conductors[430],200)
+  ***                 ^------------------------------
+  ***   in function cyclodata: ...olcyclo(conductor);abbnf=
+  ***   abelianbnfinit(pol);n
+  ***   ^---------------------
+  ***   in function abelianbnfinit: ....-1]);if(cycnc==1,return(
+  ***   abelianbnfinit0(pol))
+  ***   ^---------------------
+  ***   in function abelianbnfinit0: ...,exponent(nf.disc)));bnf=
+  ***   bnfinit(nf,1);if(vpri
+  ***   ^---------------------
+  *** bnfinit: the PARI stack overflows !
+  current stack size: 90000000000 (85830.688 Mbytes)
+  [hint] set 'parisizemax' to a non-zero value in your GPRC
+
+
+real	48m15.812s
+user	47m1.543s
+sys	1m7.195s

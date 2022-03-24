@@ -1,0 +1,6 @@
+  ***   user warning: using slow certification method.
+{ "conductor": 120, "degree": 32, "polynomial": [1,0,0,0,1,0,0,0,0,0,0,0,-1,0,0,0,-1,0,0,0,-1,0,0,0,0,0,0,0,1,0,0,0,1], "signature": [0,16], "norm_relation": 1, "discriminant": "47330370277129322496000000000000000000000000", "discriminant_bits": 145, "galois_group": [4,2,2,2], "class_group": [4], "h": "4", "h_minus": "4", "h_plus": "1", "regulator": "5926511257.210940107266922789107657839167325060686324002761", "residue": "0.1694282408478590397095895610350648824347554975897132733229", "precision": 19}
+
+real	0m1.209s
+user	0m0.850s
+sys	0m0.024s
