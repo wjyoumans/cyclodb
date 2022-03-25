@@ -12,11 +12,13 @@ permalink: /info/
 const urlParams = new URLSearchParams(window.location.search);
 let c = parseInt(urlParams.get('c'));
 
-var json, id, x, text;
+var json, rawjson, id, x, text;
 json = JSON.parse('{{ site.data.cyclodata.data | jsonify }}');
+//rawjson = JSON.parse('{{ site.data.rawcyclodata.data | jsonify }}');
 id = document.getElementById("info");
-for (x of json) {
-    if (x.conductor.plain == c) {
+for (let i = 0; i < json.length; i++) {
+    if (json[i].conductor.plain == c) {
+        x = json[i];
         text = `
             <center>
                 <p>\\(K = \\mathbb{Q}(\\zeta_{${c}})\\)</p>

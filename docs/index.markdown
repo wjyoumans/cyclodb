@@ -198,5 +198,4 @@ $(document).ready(function() {
         window.location = '{{ "/info" | relative_url }}' + `?c=${data.conductor.plain}`
     });
 });
-
 </script>
