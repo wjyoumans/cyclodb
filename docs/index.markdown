@@ -7,7 +7,7 @@ usemathjax: true
 ---
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.5/datatables.min.js"></script>
 
 <button type="button" class="advanced-search-button" id="advanced-search-button">
     Advanced search
@@ -80,6 +80,7 @@ $(document).ready(function() {
     var id = document.getElementById("table");
     var table = $('#table').DataTable({
         data: json,
+        responsive: true,
         pageLength: 10,
         columnDefs: [{
             targets: [1],
