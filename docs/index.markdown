@@ -149,8 +149,6 @@ $(document).ready(function() {
             },
             { 
                 data: "h_minus",
-                visible: false,
-                searchable: false,
                 render: {"filter": "filter", "display": "display", "_": "plain"}
             },
             { 
@@ -159,6 +157,8 @@ $(document).ready(function() {
             },
             { 
                 data: "class_group", 
+                visible: false,
+                searchable: false,
                 render: {"filter": "filter", "display": "display", "_": "plain"}
             },
             { 

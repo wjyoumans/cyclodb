@@ -3,8 +3,8 @@
 @import "minima";
 
 /** Wrapper */
-.wrapper { max-width: -webkit-calc(1300px - (30px * 2)); max-width: calc(1300px - (30px * 2)); margin-right: auto; margin-left: auto; padding-right: 30px; padding-left: 30px; }
-@media screen and (max-width: 1300px) { .wrapper { max-width: -webkit-calc(1300px - (30px)); max-width: calc(1300px - (30px)); padding-right: 15px; padding-left: 15px; } }
+.wrapper { max-width: -webkit-calc(1000px - (30px * 2)); max-width: calc(1000px - (30px * 2)); margin-right: auto; margin-left: auto; padding-right: 30px; padding-left: 30px; }
+@media screen and (max-width: 1000px) { .wrapper { max-width: -webkit-calc(1000px - (30px)); max-width: calc(1000px - (30px)); padding-right: 15px; padding-left: 15px; } }
 
 .advanced-search-button {
   background-color: #898989;//777
@@ -38,7 +38,7 @@
     border: 1px solid #CCC;
     border-radius: 1.5em;
     overflow: auto;
-    width: 60%;
+    width: 90%;
 }
 
 hr {
