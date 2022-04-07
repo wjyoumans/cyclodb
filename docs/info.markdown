@@ -60,6 +60,10 @@ for (let i = 0; i < json.length; i++) {
                     <td> ${x.h.display} </td>
                 </tr>
                 <tr>
+                    <td> Factorization: </td>
+                    <td> ${x.h_factored.display} </td>
+                </tr>
+                <tr>
                     <td> \\(h^-\\) </td>
                     <td> ${x.h_minus.display} </td>
                 </tr>
