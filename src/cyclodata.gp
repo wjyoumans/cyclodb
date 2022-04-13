@@ -123,8 +123,8 @@ verify(abbnf,con,r1,r2,h,reg,res) = {
   w = if(Mod(con,2)==0,con,2*con);
   disc = getdisc(abbnf);
   rhs = (h*reg*(2^r1)*((2*Pi)^r2))/(w*sqrt(abs(disc)));
-  p = -default(realprecision) + 1;
-  abs(res-rhs) < 10.0^p;
+  \\p = -default(realprecision) + 1;
+  precision(abs(res-rhs));
 }
 
 \\ tech = [0,0,4] in aurels code 
@@ -172,11 +172,11 @@ cyclodata(conductor, p=100) =
   hp = h/hm;
   res = getresidue(abbnf);
 
-  b = verify(abbnf,conductor,r1,r2,h,reg,res);
-  if(b==0,error("Unable to verify!"));
+  prec = verify(abbnf,conductor,r1,r2,h,reg,res);
+  \\if(b==0,error("Unable to verify!"));
 
   s = strprintf(
-    "{ \"conductor\": %d, \"degree\": %d, \"polynomial\": %d, \"signature\": %d, \"norm_relation\": %d, \"discriminant\": %s, \"discriminant_bits\": %d, \"galois_group\": %d, \"class_group\": %d, \"h\": %s, \"h_minus\": %s, \"h_plus\": %s, \"regulator\": %s, \"residue\": %s}",
+    "{ \"conductor\": %d, \"degree\": %d, \"polynomial\": %d, \"signature\": %d, \"norm_relation\": %d, \"discriminant\": %s, \"discriminant_bits\": %d, \"galois_group\": %d, \"class_group\": %d, \"h\": %s, \"h_minus\": %s, \"h_plus\": %s, \"regulator\": %s, \"residue\": %s, \"precision\": %d}",
     conductor, 
     deg, 
     Vec(pol),
@@ -190,7 +190,8 @@ cyclodata(conductor, p=100) =
     strprintf("\"%d\"", hm), 
     strprintf("\"%d\"", hp), 
     strprintf("\"%f\"", reg), 
-    strprintf("\"%f\"", res)
+    strprintf("\"%f\"", res),
+    prec
   );
 
   print(s)
