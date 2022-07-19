@@ -239,6 +239,28 @@ datatojson(conductor,abbnf,certified,t1,t2,{prec=100},{filename=""}) = {
   s
 };
 
+realcyclodata(conductor,{prec=100},{filename=""}) =
+{
+  my(f,g,abbnf,out,certified,t1,t2);
+  f = polcyclo(conductor);
+  g = totallyrealsubfield(f);
+  print("Computing abelianbnf of totally real subfield.");
+  t1 = getabstime();
+  abbnf = abelianbnfinit(g);
+  t1 = getabstime()-t1;
+  print("Done: ", strtime(t1));
+  out = realsubfielddatatojson(conductor, abbnf, certified, t1, t2, prec, filename);
+  print(out);
+
+  print("Certifying the result.");
+  t2 = getabstime();
+  certified = abelianbnfcertify(abbnf);
+  t2 = getabstime()-t2;
+  print("Done: ", strtime(t2));
+  out = realsubfielddatatojson(conductor, abbnf, certified, t1, t2, prec, filename);
+  print(out);
+};
+
 \\ Note: tech = [0,0,4] default for bnf, [0.5,0.5,4] needed to finish subfields 
 \\ of deg 1800 field in norm relation computations. May need to tweak this argument
 cyclodata(conductor,{prec=100},{filename=""}) =
@@ -260,28 +282,5 @@ cyclodata(conductor,{prec=100},{filename=""}) =
   t2 = getabstime()-t2;
   print("Done: ", strtime(t2));
   out = datatojson(conductor, abbnf, certified, t1, t2, prec, filename);
-  print(out);
- 
-  \\ might help to clear memory of abbnf, not tested but cant hurt
-  abbnf = 0;
-  certified = 0;
-  t1 = 0;
-  t2 = 0;
-
-  g = totallyrealsubfield(f);
-  print("Computing abelianbnf of totally real subfield.");
-  t1 = getabstime();
-  abbnf = abelianbnfinit(g);
-  t1 = getabstime()-t1;
-  print("Done: ", strtime(t1));
-  out = realsubfielddatatojson(conductor, abbnf, certified, t1, t2, prec, filename);
-  print(out);
-
-  print("Certifying the result.");
-  t2 = getabstime();
-  certified = abelianbnfcertify(abbnf);
-  t2 = getabstime()-t2;
-  print("Done: ", strtime(t2));
-  out = realsubfielddatatojson(conductor, abbnf, certified, t1, t2, prec, filename);
   print(out);
 };
